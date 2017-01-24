@@ -16,25 +16,11 @@ namespace main
             Point p2 = new Point(3, 5, '#');// Создание обьекта класса
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add( 0 );
-            numList.Add( 1 );
-            numList.Add( 2 );
+            HorizontLine lineHor = new HorizontLine( 5, 10, 8, '+');
+            lineHor.Drow();
 
-            int x = numList[ 0 ];
-            int y = numList[ 1 ];
-            int z = numList[ 2 ];
-
-            /*foreach (int i in numList)
-            {
-                Console.Write(i);
-            }
-
-            numList.RemoveAt( 0 );*/
-
-            List<Point> pList = new List<Point>();
-            pList.Add( p1 );
-            pList.Add( p2 );
+            HorizontLine lineVer = new HorizontLine(8, 12, 10, '+');
+            lineVer.Drow();
 
             Console.ReadLine();
         }

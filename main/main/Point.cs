@@ -8,7 +8,7 @@ namespace main
 {
     class Point
     {
-        public int x;
+        public int x;// Данные
         public int y;
         public char sym;
 
