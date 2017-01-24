@@ -10,17 +10,11 @@ namespace main
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.sym = '*';
+            Point p1 = new Point(1, 3, '*');// Создание обьекта класса
             p1.Draw();
 
-            Point p2 = new Point();
-            p1.x = 2;
-            p1.y = 5;
-            p1.sym = '#';
-            p1.Draw();
+            Point p2 = new Point(3, 5, '#');// Создание обьекта класса
+            p2.Draw();
 
             Console.ReadLine();
         }

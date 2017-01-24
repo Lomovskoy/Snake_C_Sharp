@@ -12,7 +12,14 @@ namespace main
         public int y;
         public char sym;
 
-        public void Draw()
+        public Point(int _x, int _y, char _sym)//Конструктор класса
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+        }
+
+        public void Draw()// Метод класса
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);

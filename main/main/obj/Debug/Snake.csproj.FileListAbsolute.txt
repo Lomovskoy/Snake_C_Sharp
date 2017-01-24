@@ -4,3 +4,9 @@ D:\Учёба\Git\Snake_2\main\main\bin\Debug\main.pdb
 D:\Учёба\Git\Snake_2\main\main\obj\Debug\Snake.csprojResolveAssemblyReference.cache
 D:\Учёба\Git\Snake_2\main\main\obj\Debug\main.exe
 D:\Учёба\Git\Snake_2\main\main\obj\Debug\main.pdb
+D:\Учёба\Git\Snake_2\Snake_C_Sharp.git\main\main\bin\Debug\main.exe.config
+D:\Учёба\Git\Snake_2\Snake_C_Sharp.git\main\main\obj\Debug\main.exe
+D:\Учёба\Git\Snake_2\Snake_C_Sharp.git\main\main\obj\Debug\main.pdb
+D:\Учёба\Git\Snake_2\Snake_C_Sharp.git\main\main\bin\Debug\main.exe
+D:\Учёба\Git\Snake_2\Snake_C_Sharp.git\main\main\bin\Debug\main.pdb
+D:\Учёба\Git\Snake_2\Snake_C_Sharp.git\main\main\obj\Debug\Snake.csprojResolveAssemblyReference.cache
