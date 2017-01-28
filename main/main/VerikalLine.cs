@@ -6,25 +6,15 @@ using System.Threading.Tasks;
 
 namespace main
 {
-    class VerikalLine
+    class VerikalLine : Figures //Наследается от класса родителя Фигура
     {
-        List<Point> pList;
-
         public VerikalLine(int yUp, int yDown, int x, char sym)
         {
             pList = new List<Point>();
             for(int y = yUp; y <= yDown; y++)
             {
-                Point p = new Point( y, x, sym);
+                Point p = new Point( x, y, sym);
                 pList.Add( p );
-            }
-        }
-
-        public void Drow()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();
             }
         }
     }

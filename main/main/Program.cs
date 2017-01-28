@@ -10,17 +10,19 @@ namespace main
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');// Создание обьекта класса
-            p1.Draw();
+            //Console.SetBufferSize(90, 25);
 
-            Point p2 = new Point(3, 5, '#');// Создание обьекта класса
-            p2.Draw();
+            HorizontLine upLine = new HorizontLine(0, 78, 0, '+');
+            HorizontLine downLine = new HorizontLine(0, 78, 24, '+');
+            VerikalLine leftLine = new VerikalLine(0, 28, 0, '+');
+            VerikalLine rightLine = new VerikalLine(0, 24, 78, '+');
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
 
-            HorizontLine lineHor = new HorizontLine( 5, 10, 8, '+');
-            lineHor.Drow();
-
-            HorizontLine lineVer = new HorizontLine(8, 12, 10, '+');
-            lineVer.Drow();
+            Point p = new Point(4, 5, '*');// Создание обьекта класса
+            p.Draw();
 
             Console.ReadLine();
         }

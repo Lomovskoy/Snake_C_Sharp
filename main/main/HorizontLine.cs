@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace main
 {
-    class HorizontLine
+    class HorizontLine : Figures //Наследается от класса родителя Фигура
     {
-        List<Point> pList;
-
         public HorizontLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<Point>();
@@ -17,14 +15,6 @@ namespace main
             {
                 Point p = new Point( x, y, sym);
                 pList.Add( p );
-            }
-        }
-
-        public void Drow()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();
             }
         }
     }
