@@ -8,8 +8,10 @@ namespace main
 {
     class Snake : Figures
     {
-        public Snake(Point tail, int lenght, Direction direction)
+        Direction direction;
+        public Snake(Point tail, int lenght, Direction _direction)
         {
+            direction = _direction;
             pList = new List<Point>();
             for(int i = 0; i < lenght; i++)
             {
@@ -17,6 +19,25 @@ namespace main
                 p.Move(i, direction);
                 pList.Add(p);
             }
+        }
+
+        internal void Move()
+        {
+            Point tail = pList.First();// First возвращает 1й элемент списка
+            pList.Remove(tail);// Remove удаление точки хвоста
+            Point head = GetNextPoint();
+            pList.Add(head);
+
+            tail.Clear();
+            head.Draw();
+        }
+
+        public Point  GetNextPoint()
+        {
+            Point head = pList.Last();// Текущая позиция головы змейки
+            Point nextPoint = new Point(head);
+            nextPoint.Move(1, direction);
+            return nextPoint;
         }
     }
 }
