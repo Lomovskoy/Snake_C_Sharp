@@ -25,16 +25,30 @@ namespace main
             Point p = new Point(4, 5, '*');// Создание обьекта класса
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
-            while(true)
+
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+           
+            while (true)
             {
-                if(Console.KeyAvailable)
+                if(snake.Eat( food ))
                 {
-                    ConsoleKeyInfo key = Console.ReadKey();
-                    snake.HandleKey( key.Key);
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
                 }
 
                 Thread.Sleep(100);
-                snake.Move();
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
             }
         }
     }
