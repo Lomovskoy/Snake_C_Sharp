@@ -11,7 +11,7 @@ namespace main
     {
         static void Main(string[] args)
         {
-            //Console.SetBufferSize(90, 25);
+            //Console.SetBufferSize(80, 25);
             // Отрисовка рамок
             HorizontLine upLine = new HorizontLine(0, 78, 0, '+');
             HorizontLine downLine = new HorizontLine(0, 78, 24, '+');
@@ -25,26 +25,17 @@ namespace main
             Point p = new Point(4, 5, '*');// Создание обьекта класса
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey( key.Key);
+                }
+
+                Thread.Sleep(100);
+                snake.Move();
+            }
         }
     }
 }
