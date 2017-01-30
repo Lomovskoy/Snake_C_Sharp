@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace main
+namespace Snake
 {
-    class HorizontLine : Figures //Наследается от класса родителя Фигура
+    class HorizontalLine : Figure
     {
-        public HorizontLine(int xLeft, int xRight, int y, char sym)
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<Point>();
-            for(int x = xLeft; x <= xRight; x++)
+            for (int x = xLeft; x <= xRight; x++)
             {
-                Point p = new Point( x, y, sym);
-                pList.Add( p );
+                Point p = new Point(x, y, sym);
+                pList.Add(p);
             }
         }
     }

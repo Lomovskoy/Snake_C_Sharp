@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace main
+namespace Snake
 {
-    class VerikalLine : Figures //Наследается от класса родителя Фигура
+    class VerticalLine : Figure
     {
-        public VerikalLine(int yUp, int yDown, int x, char sym)
+        public VerticalLine(int yUp, int yDown, int x, char sym)
         {
             pList = new List<Point>();
-            for(int y = yUp; y <= yDown; y++)
+            for (int y = yUp; y <= yDown; y++)
             {
-                Point p = new Point( x, y, sym);
-                pList.Add( p );
+                Point p = new Point(x, y, sym);
+                pList.Add(p);
             }
         }
     }
